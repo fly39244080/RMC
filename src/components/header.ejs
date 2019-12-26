@@ -1,0 +1,42 @@
+
+<div class="top-menu" id="topMenu">
+    <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="test.html">测试</a></li>
+    </ul>
+</div>
+<script>
+    window.apiUrl = {
+        // dev:{
+        //     product:'http://39.105.171.16:8085/',
+        //     login:'http://39.105.171.16:8082/',
+        //     check:'http://39.105.171.16:8082/'
+        // },
+        dev:'http://192.168.3.135:3200',
+        prod:'http://localhost:8181',
+        test:'http://localhost:5002/'
+    };
+</script>
+ 
+ <style>
+    .top-menu {
+        height:50px;
+        background:#f5f5f5;
+        border-bottom:1px solid #ccc;
+    }
+    .top-menu li {
+        float:left;
+        padding:5px;
+        list-style-type: none;
+        line-height: 40px;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+
+    .main-page-frame {
+        position: relative;
+        margin-top:30px;
+        background: #ff6600;
+        padding: 20px;
+    }
+ </style>
