@@ -1,10 +1,20 @@
 
-<div class="top-menu" id="topMenu">
-    <ul>
-        <li><a href="index.html">首页</a></li>
-        <li><a href="test.html">测试</a></li>
+<link href="./static/main.css" rel="stylesheet">
+<div class="top-menu page-width" id="topMenu">
+    <div class="logo"></div>
+    <ul class="menu-list">
+        <li><a href="index.html" class="actived">首页</a></li>
+        <li><a href="net.html">.NET架构</a></li>
+        <li><a href="web.html">WEB前端</a></li>
+        <li><a href="try.html">预约试听</a></li>
+        <li><a href="about.html">关于我们</a></li> 
     </ul>
+    <div class="quick-link">
+        <a href="login.html">登录</a>
+        <a href="register.html" class="actived">注册</a>
+    </div>
 </div>
+<script type="text/javascript" src="https://npmcdn.com/ejs@3.0.1/ejs.min.js"></script>
 <script>
     window.apiUrl = {
         // dev:{
@@ -18,25 +28,3 @@
     };
 </script>
  
- <style>
-    .top-menu {
-        height:50px;
-        background:#f5f5f5;
-        border-bottom:1px solid #ccc;
-    }
-    .top-menu li {
-        float:left;
-        padding:5px;
-        list-style-type: none;
-        line-height: 40px;
-        margin-right: 15px;
-        cursor: pointer;
-    }
-
-    .main-page-frame {
-        position: relative;
-        margin-top:30px;
-        background: #ff6600;
-        padding: 20px;
-    }
- </style>

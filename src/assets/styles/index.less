@@ -1,1 +1,159 @@
+.main-title {
+    height:32px;
+    font-size:32px;
+    font-family:Microsoft YaHei;
+    font-weight:bold;
+    color:rgba(50,50,50,1);
+    line-height:32px;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &:after {
+        content:'';
+        position: absolute;
+        width:35px;
+        height:4px;
+        background:rgba(0,178,36,1);
+        border-radius:1px;
+        left: 50%;
+        top: 98px;
+        transform: translateX(-50%);
+    }
+}
+.sources-list {
+    margin-left: -45px;
+    height: auto;
+    overflow: auto;
+    li {
+        width:370px;
+        height: 330px;
+        float: left;
+        margin-left: 45px;
+        .title {
+            font-size: 18px;
+        }
+        .time {
+            color: #FF5A00;
+        }
+        img {
+            width: 100%;
+            height: 220px;
+        }
+        span {
+            display: block;
+            text-align: left;
+        }
+    }
+}
 
+.bg-box {
+    background: #ededed;
+}
+
+.our-advantage {
+    height: auto;
+    overflow: auto;
+    padding-bottom: 60px;
+    background: url(../images/home/bg-zs.png) center bottom no-repeat;
+    dl {
+        height: auto;
+        overflow: auto;
+        dd {
+            display: block;
+            width:25%;
+            float: left;
+            b {
+                font-size: 48px;
+                font-family:arial;
+                font-weight: bold;
+                color: #323232;
+                display: block;
+               
+            }
+            .unit {
+                font-size: 12px;
+            }
+           .title {
+                font-size: 16px;
+                color: #666;
+           }
+        }
+    }
+    .info-tip {
+        margin-top: 60px;
+        button {
+            margin-top: 30px;
+            padding: 0 30px;
+            height:50px;
+            font-size: 20px;
+        }
+    }
+   
+}
+.services-list {
+    margin-left: -45px;
+    height: auto;
+    overflow: auto;
+    li {
+        width:25%;
+        height: 200px;
+        float: left;
+        font-size: 16px;
+        margin-bottom: 25px;
+        img {
+            max-width: 152;
+            max-height: 102px;
+        }
+        span {
+            display: block;
+            &.title {
+                color: #00B224;
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+.slide-img-honor {
+    position: relative;
+    height: 335px;
+    i {
+        display: block;
+        width: 27px;
+        height: 27px;
+        background: url(../images/home/icon-arrow.png) left center no-repeat;
+        position: absolute;
+      
+        top:110px;
+        &.icon-left {
+            transform: rotate(180deg);
+            left: 0;
+        }
+        &.icon-right {
+            right: 0;
+        }
+    }
+    .imgs-box {
+        width: calc(100% - 80px);
+        position: absolute;
+        left: 30px;
+        dd {
+            float: left;
+            width:260px;
+            background: url(../images/home/zs-01.png) center top no-repeat;
+            margin-left: 20px;
+            color: #323232;
+            img {
+                width: 168px;
+                height: 168px;
+                border-radius: 50%;
+                margin-top: 30px;
+                margin-bottom: 40px;
+            }
+            span {
+                display: block;
+            }
+        }
+    }
+    
+}
