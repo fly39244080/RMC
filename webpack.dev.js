@@ -32,7 +32,7 @@ module.exports = merge(baseWebpackConfig,{
     devServer:{
         contentBase:buildPath,
         host:'0.0.0.0',
-        port:'3200',
+        port:'3300',
         historyApiFallback: true,
         open:false,
         publicPath:'/',

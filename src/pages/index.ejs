@@ -8,10 +8,119 @@
 </head>
 <body>
     <%= require('../components/header.ejs')()%>
-        <div id="mainContent" class="main-page-frame">   
-            <div id="index">我是首页</div>
+    <%= require('../components/bannerSlide.ejs')()%>
+    <div class="page-width">   
+        <div class="main-title">免费课程推荐</div>
+        <div id="sourcesFrame"></div> 
+    </div>
+
+    <div class="bg-box">
+        <div class="page-width our-advantage">
+            <div class="main-title">五年品牌缔造，专业IT机构，让程序员放心选择</div>
+            <dl>  
+                <dd>
+                    <b>1000,000</b>
+                    <span class="title">各类IT学员在线学习</span>
+                </dd>
+                <dd>
+                    <b>10,000<i class="unit">+</i></b>
+                    <span class="title">VIP IT学员</span>
+                </dd>
+                <dd>
+                    <b>4000<i class="unit">+</i></b>
+                    <span class="title">直播时长（小时）</span>
+                </dd>
+                <dd>
+                    <b>100<i class="unit">%</i></b>
+                    <span class="title">架构师亲授</span>
+                </dd>
+            </dl>
+            <div class="info-tip">
+                以上数据为内部统计数据 <br/>
+                <button type="button" class="btn-normal">免费领取试听课</button>
+            </div>
         </div>
-    <div class="footer-box"></div>
+    </div>
+
+    <div class="page-width">   
+        <div class="main-title">服务体系</div>
+        <div id="servicesList">
+            <ul class="services-list">
+                <li>
+                    <img src="static/images/services/01.png">
+                    <span class="title">课前预习</span>
+                    <span>提供配套预习资料</span>
+                </li> 
+                <li>
+                    <img src="static/images/services/02.png">
+                    <span class="title">直播授课</span>
+                    <span>在线直播，师生实时互动</span>
+                </li> 
+                <li>
+                    <img src="static/images/services/03.png">
+                    <span class="title">视频复习</span>
+                    <span>PC端+移动端知识复习，温故知新</span>
+                </li> 
+                <li>
+                    <img src="static/images/services/04.png">
+                    <span class="title">在线答疑</span>
+                    <span>老师6*10小时在线答疑，解你所困</span>
+                </li> 
+                <li>
+                    <img src="static/images/services/05.png">
+                    <span class="title">班主任监督</span>
+                    <span>全程监督，向自律性差说不</span>
+                </li> 
+                <li>
+                    <img src="static/images/services/06.png">
+                    <span class="title">定期考核</span>
+                    <span>定期考核反馈学习效果</span>
+                </li> 
+                <li>
+                    <img src="static/images/services/07.png">
+                    <span class="title">就业辅导</span>
+                    <span>笔面试指导+内推</span>
+                </li> 
+                <li>
+                    <img src="static/images/services/08.png">
+                    <span class="title">课程迭代</span>
+                    <span>知识体系免费升级</span>
+                </li> 
+            </ul>
+        </div>
+    </div>
+
+    <div class="bg-box">
+        <div class="page-width corporate-honor">
+            <div class="main-title">企业荣誉</div>
+
+            <div class="slide-img-honor">
+                <i class="icon-left"></i>
+                <dl class="imgs-box">
+                    <dd>
+                        <img src="static/images/course01.png">
+                        <span>2019年度 <br/>影响力教育集团</span>
+                    </dd>
+                    <dd>
+                        <img src="static/images/course01.png">
+                        <span>2019年度 <br/>影响力教育集团</span>
+                    </dd>
+                    <dd>
+                        <img src="static/images/course01.png">
+                        <span>2019年度 <br/>影响力教育集团</span>
+                    </dd>
+                    <dd>
+                        <img src="static/images/course01.png">
+                        <span>2019年度 <br/>影响力教育集团</span>
+                    </dd>
+                </dl>
+                <i class="icon-right"></i>
+            </div>
+        </div>
+    </div>
+
+
+ 
     <%= require('../components/footer.ejs')()%>
 </body>
 </html>
