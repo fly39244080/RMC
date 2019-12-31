@@ -5,20 +5,18 @@ const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 //必须是最新的beta版本才支持webpack4
 const extractTextPlugin = require('extract-text-webpack-plugin'); 
-
 //以程序为根目录，作为起点，根据参数解析出一个绝对路径
 var buildPath = path.resolve(__dirname,'build'); 
-
  //需要在项目环境安装webpack
 var htmlWebpackPlugin = require('html-webpack-plugin');
-
-
 var srcPath = path.resolve(__dirname,'src');
 var htmlPagesPath = path.resolve(srcPath,'pages');
 var pluginsAll = []; //存储所有的插件
 
 console.log(process.env.scene);
+
 var isProduction = (process.env.scene=='prod');
+
 
 //入口文件
 var newEntries = {};
@@ -56,7 +54,6 @@ pluginsAll.push(new CopyWebpackPlugin([
       // console.log(page);
       var pagestr = page.match(/pages\/(\S*)\.ejs/);
       var name = pagestr[1];
-      console.log(name);
       var plug = new htmlWebpackPlugin({
           filename:path.resolve(buildPath,name+'.html'),
           title:'测试',

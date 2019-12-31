@@ -26,6 +26,7 @@ module.exports = merge(baseWebpackConfig,{
                       fallback:'style-loader'
                    })
              },
+             
         ]
      },
     devServer:{
