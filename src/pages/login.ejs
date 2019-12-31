@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link  rel="stylesheet"  href="./static/main.css" >
+</head>
+<body>
+    <div class="main-login">
+        <img class="login-logo" src="../../static/images/login-logo.png" >
+        <div class="login">
+            <ul class="login-ul">
+                <li>短信登录</li>
+                <li>密码登录</li>
+            </ul>
+            <div class="flex phone-input mt-20">
+                <input type="text" placeholder="请输入手机号"/>
+                <span>获取验证码</span>
+            </div>
+            <div class="flex phone-input mt-20">
+                <input type="text" placeholder="请输入验证码"/>
+            </div>
+            <div class="flex mt-40 to-register">
+                <p>未注册手机号，完成验证即可注册登录</p>
+            </div>
+            <div class="login-btn mt-10">
+                登 录
+            </div>
+            <ul class="flex login-bottom-ul mt-20">
+                <li>扫码登录</li>
+                <li><a href='./register.html'>立即注册</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

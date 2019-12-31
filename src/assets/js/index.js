@@ -5,32 +5,32 @@ console.log(config);
 
 
 var sourcesList = [{
-    img:'static/course01.png',
+    img:'static/images/course01.png',
     title:'C#.NET高级软件工程师',
     time:'每周1~6 10:00~11:00',
     teacher:'Zilor'
 },{
-    img:'static/course01.png',
+    img:'static/images/course01.png',
     title:'C#.NET高级软件工程师',
     time:'每周1~6 10:00~11:00',
     teacher:'Zilor'
 },{
-    img:'static/course01.png',
+    img:'static/images/course01.png',
     title:'C#.NET高级软件工程师',
     time:'每周1~6 10:00~11:00',
     teacher:'Zilor'
 },{
-    img:'static/course01.png',
+    img:'static/images/course01.png',
     title:'C#.NET高级软件工程师',
     time:'每周1~6 10:00~11:00',
     teacher:'Zilor'
 },{
-    img:'static/course01.png',
+    img:'static/images/course01.png',
     title:'C#.NET高级软件工程师',
     time:'每周1~6 10:00~11:00',
     teacher:'Zilor'
 },{
-    img:'static/course01.png',
+    img:'static/images/course01.png',
     title:'C#.NET高级软件工程师',
     time:'每周1~6 10:00~11:00',
     teacher:'Zilor'
