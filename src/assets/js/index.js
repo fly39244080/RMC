@@ -1,8 +1,5 @@
 import 'assets/styles/index.less';
-console.log(config);
-
-
-
+console.log(config.xmlAjax);
 
 var sourcesList = [{
     img:'static/images/course01.png',
@@ -48,6 +45,7 @@ var sctemplate = `<ul class="sources-list">
     </ul>`;
 var schtml = ejs.render(sctemplate, { sourcesList: sourcesList });
 document.getElementById('sourcesFrame').innerHTML = schtml;  
+
 // config.ajaxFun({
 //     url:'/api/getColorOrsize',
 //     type:'get'
