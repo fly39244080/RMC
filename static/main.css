@@ -247,8 +247,9 @@ border-radius:25px;
   color: #999;
 }
 .page-footer .column-info {
-  width:30%;
+  width: 28%;
   float: left;
+  margin-left: 60px;
 }
 .page-footer .icon-tel {
   background: url(./images/dianhua.png) left top no-repeat;
