@@ -1,0 +1,53 @@
+<!-- 预约试听 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="软谋教育">
+    <meta name="keyword" content="软谋教育">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link  rel="stylesheet"  src="./static/main.css" >
+</head>
+<body>
+    <%= require('../components/header.ejs')()%>
+    <%= require('../components/bannerSlide.ejs')()%>
+
+    <div class="try-to-listen">
+        <div class="steps-number">
+            <div class="order">
+                <em class="square">
+                    <i class="num">1</i>
+                    <i class="step">step</i>
+                </em>
+                
+            </div>
+            <div class="order">
+                <em class="square">
+                    <i class="num">2</i>
+                    <i class="step">step</i>
+                </em>
+            </div>
+            <div class="order">
+                <em class="square">
+                    <i class="num">3</i>
+                    <i class="step">step</i>
+                </em>
+            </div>
+            <div class="order">
+                <em class="square">
+                    <i class="num">4</i>
+                    <i class="step">step</i>
+                </em>
+            </div>
+            <div class="order">
+                <em class="square">
+                    <i class="num">5</i>
+                    <i class="step">step</i>
+                </em>
+            </div>
+        </div>
+    </div>
+    <%= require('../components/footer.ejs')()%>
+</body>
+</html>
