@@ -241,14 +241,15 @@ border-radius:25px;
   box-sizing: border-box;
   padding-top: 50px;
   color: #999;
-  padding-left: 100px;
+  position: relative;
 }
 .page-footer a {
   color: #999;
 }
 .page-footer .column-info {
-  width:30%;
+  width: 28%;
   float: left;
+  margin-left: 60px;
 }
 .page-footer .icon-tel {
   background: url(./images/dianhua.png) left top no-repeat;
@@ -295,8 +296,8 @@ border-radius:25px;
   .page-footer .lesson {
     padding-top:30px;
   }
-  .page-footer .lesson li{
-    background: url(./images/weixin.png) left top no-repeat;
+  .page-footer .lesson li {
+     background: url(./images/weixin.png) left top no-repeat;
      display: inline-block;
      margin-right: 30px;
      padding-top: 35px;
@@ -313,4 +314,21 @@ border-radius:25px;
   }
   .mt-10{
     margin-top:10px;
+  }
+  .page-footer .copy-right {
+    display: block;
+    clear: both;
+    height: 70px;
+    line-height: 70px;
+    width: 100%;
+    background: #292929;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    
+  }
+  .page-footer .copy-right a {
+    display: inline-block;
+    margin-left: 6px;
+    margin-right: 6px;
   }

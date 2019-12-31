@@ -1,0 +1,127 @@
+<!-- 预约试听 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="软谋教育">
+    <meta name="keyword" content="软谋教育">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <%= require('../components/header.ejs')()%>
+    <%= require('../components/bannerSlide.ejs')()%>
+    <div class="page-width audition-frame">
+        
+        <div class="try-to-listen">
+            <div class="steps-number">
+                <div class="order one">
+                    <em class="square">
+                        <i class="num">1</i>
+                        <i class="step">step</i>
+                    </em>   
+                </div>
+                <div class="order two">
+                    <em class="square">
+                        <i class="num">2</i>
+                        <i class="step">step</i>
+                    </em>
+                </div>
+                <div class="order three">
+                    <em class="square">
+                        <i class="num">3</i>
+                        <i class="step">step</i>
+                    </em>
+                </div>
+                <div class="order four">
+                    <em class="square">
+                        <i class="num">4</i>
+                        <i class="step">step</i>
+                    </em>
+                </div>
+                <div class="order last">
+                    <em class="square">
+                        <i class="num">5</i>
+                        <i class="step">step</i>
+                    </em>
+                </div>
+            </div>
+
+            <div class="steps-detail">
+                <dl class="one">
+                    <dt>注册</dt>
+                    <dd>
+                        <p>注册后我们会尽快与您联系，给您发预习资料</p>
+                        <p style="margin-top: 30px;">
+                            <input type="text" class="text-material" > 
+                            <button type="button" class="btn-normal">立即领取</button>
+                        </p>
+                    </dd>
+                </dl>
+
+                <dl class="two">
+                    <dt>为您安排试听课</dt>
+                    <dd>
+                        <p>您的专属课程顾问会及时与您联系，为您安排评测及直播体验课</p>
+                        <p>
+                            <button type="button" class="btn-normal">在线咨询</button>
+                        </p>
+                    </dd>
+                </dl>
+
+                <dl class="three">
+                    <dt>安装腾讯课堂客户端</dt>
+                    <dd>
+                        <p>课程学习支持PC端、移动端在线观看（点击图标即可下载）</p>
+                        
+                        <ul class="client-side">
+                            <li>
+                                <i class="window"></i>
+                                <span>Windows端</span></li>
+                            <li>
+                                <i class="mac"></i>
+                                <span>Mac端</span>
+                            </li>
+                            <li>
+                                <i class="android"></i>
+                                <span>安卓端</span>
+                            </li>
+                            <li>
+                                <i class="ios"></i>
+                                <span>IOS端</span>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+
+                <dl class="four">
+                    <dt>安装好学习所需的开发工具</dt>
+                    <dd>
+                        <p>点击图标即可下载</p>
+                        <ul class="client-side tool">
+                            <li>
+                                <i class="tool-vscode"></i>
+                                <span>前端试听：VsCode</span></li>
+                            <li>
+                                <i class="tool-vs"></i>
+                                <span>.NET试听：VS2019</span>
+                            </li>
+                           
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="last">
+                    <dt>进入在线课堂开始学习</dt>
+                    <dd>
+                        <p>为您带来精彩直播体验课</p>
+                    </dd>
+                </dl>
+
+            </div>
+        </div>
+    </div>
+
+   
+    <%= require('../components/footer.ejs')()%>
+</body>
+</html>

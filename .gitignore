@@ -1,6 +1,7 @@
 .idea/
 .vscode/
 node_modules/
+build/
 package-lock.json
 dist/
 test/e2e/reports/
