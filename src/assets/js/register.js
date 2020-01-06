@@ -38,11 +38,6 @@ $(function(){
         regFlag.qqFlag ? $(".qq-error-tip").hide() : $(".qq-error-tip").show()
     });
     // 验证班级
-    $("#regClass").bind("input propertychange",function(event){
-        var num = $("#regClass").val()
-        regFlag.classFlag = /^[0-9]\d{0,1}$/.test(num)
-        regFlag.classFlag ? $(".class-error-tip").hide() : $(".class-error-tip").show()
-    });
 
     // 点击获取验证码的处理
     $("#getCapture").click(function(){
@@ -89,12 +84,8 @@ $(function(){
         if(!regFlag.qqFlag){
             $(".qq-error-tip").show()
         }
-        if(!regFlag.classFlag){
-            $(".class-error-tip").show()
-        }
-        if(regFlag.phoneFlag && regFlag.capFlag && regFlag.passFlag && regFlag.qqFlag && regFlag.classFlag){
+        if(regFlag.phoneFlag && regFlag.capFlag && regFlag.passFlag && regFlag.qqFlag){
             console.log('成功注册掉后台接口');
-            
         }
 
     })
