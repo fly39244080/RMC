@@ -286,28 +286,39 @@ function cloneObj(oldObj) { //复制对象方法
         this.scrollDom.style.marginLeft = 0;
         this.start();
         
-        this.$parentDom.onmouseover = (ev)=>{
-            // console.log('溢入');
-            this.options.moveingTag = false;
+        this.$parentDom.onmouseleave = (ev)=>{
+            ev.stopPropagation();
+            console.log('出来');
+            this.options.moveingTag = true;
+            this.options.IntervalTimer = null;
             clearInterval(this.options.IntervalTimer);
+            this.options.moveingTag &&this.start();
+
         };
         
         this.$parentDom.onmouseenter = (ev)=>{
-            this.options.moveingTag = true;
-            this.start();
+            this.options.moveingTag = false;
+            this.options.IntervalTimer = null;
+            clearInterval(this.options.IntervalTimer);
+            // console.log('进去');
+
         };
         this.$leftArrow.onclick = ()=>{
+            this.options.IntervalTimer = null;
             clearInterval(this.options.IntervalTimer);
-            this.start('ltr');
+            this.options.moveingTag && this.start('ltr');
         }
         this.$rightArrow.onclick = ()=>{
+            this.options.IntervalTimer = null;
             clearInterval(this.options.IntervalTimer);
-            this.start();
+            this.options.moveingTag &&this.start();
         } 
     }
     startMarqueeImg.prototype.start = function(dir){
+        // console.log('ppp');
         this.options.IntervalTimer = setInterval(()=>{
             this.moveing(dir);
+            // console.log('kkk=========');
         }, 1);
     }
     startMarqueeImg.prototype.moveing = function(dir) {
@@ -319,6 +330,7 @@ function cloneObj(oldObj) { //复制对象方法
         moveLeft = (Math.abs(moveLeft)>=this.options.slideFullWid-this.options.lw)?0:moveLeft;
          //判断如果moveLeft增加到 element的最大宽度时候， 重置为0
         var oneSlideWid = this.options.lw/4;
+        moveLeft = moveLeft>=0? 0:moveLeft;
         this.scrollDom.style.marginLeft = moveLeft +dis + "px";
        
          //每次只滚动一个图片 就停一下
