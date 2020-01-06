@@ -1,5 +1,32 @@
 import 'assets/styles/index.less';
+import 'assets/styles/img-slide-banner.less';
 console.log(config.xmlAjax);
+
+//首页大图轮播,单独打一个包方便cdn缓存
+require.ensure([], function(){
+    let imageSlide = require('assets/utils/image_show_slider');
+    var bannerBox = document.getElementById('bannerBox');
+    let imgCount=bannerBox.querySelectorAll('li').length;
+   
+    if(imgCount>0) {
+        bannerBox.querySelectorAll('li')[0].style.zIndex = 2;
+        let runimg=new imageSlide.runImg('bannerBox','30',imgCount);
+        runimg.info();
+    }
+    var noticeList =  document.getElementById('noticeList'),
+        imgsLen = noticeList.querySelectorAll('dd').length;
+        
+        noticeList.style.width = imgsLen * 300 *2;
+        
+    let startMarquee2=new imageSlide.startMarqueeImg({
+        element:'noticeList',
+        leftArrow:'iconLeft',
+        rightArrow:'iconRight',
+        slideFullWid:imgsLen * 300 *2
+    });
+    startMarquee2.init();
+ 
+},'imageSlider');
 
 var sourcesList = [{
     img:'static/images/course01.png',

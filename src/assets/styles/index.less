@@ -116,15 +116,16 @@
 
 .slide-img-honor {
     position: relative;
-    height: 335px;
+    height: 305px;
     i {
         display: block;
         width: 27px;
         height: 27px;
         background: url(../images/home/icon-arrow.png) left center no-repeat;
         position: absolute;
-      
+        z-index: 100;
         top:110px;
+        cursor: pointer;
         &.icon-left {
             transform: rotate(180deg);
             left: 0;
@@ -133,16 +134,23 @@
             right: 0;
         }
     }
-    .imgs-box {
-        width: calc(100% - 80px);
+    .imgs-slides-out {
+        width: 100%;
         position: absolute;
-        left: 30px;
+        left: 0px;
+        height: 305px;
+        overflow: hidden;
+        z-index: 50;
+        .imgs-box {
+           
+            width: 3600px;
+        }
         dd {
             float: left;
-            width:260px;
+            width:300px;
             background: url(../images/home/zs-01.png) center top no-repeat;
-            margin-left: 20px;
             color: #323232;
+            margin-bottom: 20px;
             img {
                 width: 168px;
                 height: 168px;

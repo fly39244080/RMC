@@ -1,0 +1,67 @@
+//home page layout
+.banner-box {
+    height: 520px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .banner-box-inner {
+      height: 100%;
+    }
+    .banner-img-list {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 1;
+        &:nth-child(1) {
+          z-index: 2;
+        }
+        a {
+          width: 100%;
+          height: 100%;
+          display: block;
+          img {
+            &.pc-img {
+              height: 350px;
+            }
+          }
+        }
+        &.active {
+          z-index: 10;
+        }
+      }
+
+    }
+    .countNum {
+      position: absolute;
+      left: -moz-calc((100% - 100px) / 2);
+      left: -webkit-calc((100% - 100px) / 2);
+      left: calc((100% - 100px) / 2);
+      bottom: 14px;
+      z-index: 20;
+      li {
+        width: 30px;
+        height: 5px;
+        float: left;
+        color: #fff;
+        display: block;
+        width: 30px;
+        height: 5px;
+        margin: 0 4px;
+        background-color: hsla(0,0%,100%,.4);
+        text-align: center;
+       
+        cursor: pointer;
+        &.current {
+          background: #fff;
+          font-weight: bold;
+        }
+      }
+    }
+  }
