@@ -1,6 +1,14 @@
 import '../styles/register.less'
 import $ from 'jquery'
+import {getUrlParam} from '../utils/getUrlParam'
 $(function(){
+    // 先读取地址栏上的mobile的值 读取到的话就放在手机号的输入框里
+    var res = getUrlParam('mobile')
+    if(res){
+        // 防止用户跳到注册页面后随意篡改手机号码
+        var resNum = /^1[3456789]\d{9}$/.test(res)
+        resNum &&  $("#regPhone").val(res)
+    }
     // 验证码倒计时长
     var countNum = 60
     // 定义一个flag判断是否已经触发定时器
@@ -41,6 +49,11 @@ $(function(){
 
     // 点击获取验证码的处理
     $("#getCapture").click(function(){
+        // 可能存在用户是由试听页面跳转过来的这个时候要先拿到手机号去验证一下
+        var numRes = $("#regPhone").val()
+        if( numRes && /^1[3456789]\d{9}$/.test(numRes)){
+            regFlag.phoneFlag = true
+        }
         // 手机号不通过的时候不触发倒计时并且提示
         if(!regFlag.phoneFlag){
             $(".phone-error-tip").show()

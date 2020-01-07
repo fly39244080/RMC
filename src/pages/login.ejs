@@ -15,25 +15,28 @@
                 <li id="messageLogin">短信登录</li>
             </ul>
             <div class="message">
-                <div class="flex phone-input mt-20">
+                <div class="flex phone-input mt-30">
                     <input type="text" id="msgPhoneTip" placeholder="请输入手机号"/>
                     <span id="getCapture">获取验证码</span>
-                </div>
-                <p class="msg-error-tip">请输入正确的手机号</p>
-                <div class="flex phone-input mt-20">
+                    <p class="msg-error-tip">请输入正确的手机号</p>
+                </div> 
+                <div class="flex phone-input mt-30">
                     <input type="text" id="getPleaseCapture" placeholder="请输入验证码" maxlength="4" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                    <p class="cap-error-tip">请输入正确的验证码</p>
                 </div>
-                <p class="cap-error-tip">请输入正确的验证码</p>
+                
             </div>
             <div class="password">
-                <div class="flex phone-input mt-20">
+                <div class="flex phone-input mt-30">
                     <input  type="text" id="passPhoneTip" placeholder="请输入手机号"/>
+                    <p class="phone-error-tip">请输入正确的手机号</p>
                 </div>
-                <p class="phone-error-tip">请输入正确的手机号</p>
-                <div class="flex phone-input mt-20">
+                
+                <div class="flex phone-input mt-30">
                     <input type="password" id="passWordTip" placeholder="请输入密码"/>
+                    <p class="pass-error-tip">请输入6-12字母数字或下划线</p>
                 </div>
-                <p class="pass-error-tip">请输入6-12字母数字或下划线</p>
+                
             </div>
             <div class="flex mt-40 to-register">
                 <p class="ruanmou-flag">让编程更简单,让程序员更幸福</p>
