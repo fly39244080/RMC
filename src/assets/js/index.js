@@ -63,7 +63,7 @@ document.getElementById('sourcesFrame').innerHTML = schtml;
 
 
 $(window).load(function () {
-    single = $('.imgs-slides-out').mySingleScroll({
+    $('.imgs-slides-out').mySingleScroll({
         speed: 2000
     });
 });

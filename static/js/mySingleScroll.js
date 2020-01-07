@@ -104,7 +104,6 @@
         }
     }
     $.fn.mySingleScroll = function (options) {
-        debugger
         var method = arguments[0];
         if (methods[method]) {
             method = methods[method];
