@@ -62,7 +62,6 @@ var schtml = ejs.render(sctemplate, { sourcesList: sourcesList });
 document.getElementById('sourcesFrame').innerHTML = schtml;  
 
 
-var single;
 $(window).load(function () {
     single = $('.imgs-slides-out').mySingleScroll({
         speed: 2000

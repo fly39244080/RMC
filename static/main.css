@@ -341,3 +341,103 @@ border-radius:25px;
   .div{
     box-sizing: border-box;
   }
+
+
+  /* 弹框样式 */
+
+  /*pop window*/
+ .tip-window-layer {
+  position: absolute;
+  right:0;
+  top:0;
+  border: 1px solid #E6EAEE;
+  padding:0 0px 10px 0px;
+  z-index: 999;
+  background: #fff;
+  border-radius: 4px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
+}
+.tip-header-section {
+  height:35px;
+  line-height:35px;
+  font-size:14px;
+  background:#fff;
+  border-bottom: 1px solid #f2f2f2;
+}
+.tip-title {
+  float:left;
+  width:80%;
+  margin-left:5px;
+  color: #000;
+}
+.tip-icon-close {
+  float:right; cursor:pointer;margin-right:5px;
+  color: #666;
+}
+.tip-main-content {
+  min-height: 180px;
+  height:auto;
+  overflow:hidden;
+  line-height:24px;
+  text-align:center;
+  margin-top:10px;
+  box-sizing: border-box;
+  padding: 10px 30px 30px 30px;
+}
+
+.tip-bottom-section {
+  background: #F0F3F8;
+  box-shadow: 0 -1px 0 0 #E6EAEE;
+  height:70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+  position: absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  
+}
+
+
+.btnOk {
+  background-image: linear-gradient(-180deg, #39B54A 0%, #34AA44 98%);
+  border: 1px solid #249533;
+  cursor:pointer;
+
+  border-radius: 4px;
+  height: 35px;
+  padding: 2px 31px;
+  color: #fff;
+}
+.btnNo {
+  background-image: linear-gradient(0deg, #F2F4F7 0%, #FFFFFF 100%);
+  border: 1px solid #CED0DA;
+  border-radius: 4px;
+  height: 35px;
+  padding: 2px 31px;
+  color: #4F5F6F;
+}
+
+.box-out {
+    position: relative;
+    width:60px;
+    height:50px;
+
+}
+.layer-msg-tip,.loading-msg-tip {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  z-index: 1000;
+  padding: 10px 30px;
+  font-size: 12px;
+  border-radius: 10px;
+}
