@@ -268,7 +268,6 @@ function cloneObj(oldObj) { //复制对象方法
             lw:'',
             speed:'80',  //移动的速度
             delay:'4000',  //移动后停留的时间
-            IntervalTimer:null,  //定时器
             moveingTag:true
         };
         this.options = extendObj(defaultsOpt, option);
@@ -279,7 +278,7 @@ function cloneObj(oldObj) { //复制对象方法
         this.options.lw=this.scrollDom.parentElement.clientWidth;  //可视区域的宽度
         this.$parentDom = this.scrollDom.parentElement;
 
-      
+       
     }
     startMarqueeImg.prototype.init = function(){ 
         this.scrollDom.innerHTML += this.scrollDom.innerHTML;
@@ -288,38 +287,27 @@ function cloneObj(oldObj) { //复制对象方法
         
         this.$parentDom.onmouseleave = (ev)=>{
             ev.stopPropagation();
-            console.log('出来');
             this.options.moveingTag = true;
-            this.options.IntervalTimer = null;
-            clearInterval(this.options.IntervalTimer);
-            this.options.moveingTag &&this.start();
-
+            this.start();
         };
         
         this.$parentDom.onmouseenter = (ev)=>{
             this.options.moveingTag = false;
-            this.options.IntervalTimer = null;
-            clearInterval(this.options.IntervalTimer);
-            // console.log('进去');
-
+            clearInterval(this.IntervalTimer);
+            console.log('进去');
         };
         this.$leftArrow.onclick = ()=>{
-            this.options.IntervalTimer = null;
-            clearInterval(this.options.IntervalTimer);
             this.options.moveingTag && this.start('ltr');
         }
         this.$rightArrow.onclick = ()=>{
-            this.options.IntervalTimer = null;
-            clearInterval(this.options.IntervalTimer);
             this.options.moveingTag &&this.start();
         } 
     }
     startMarqueeImg.prototype.start = function(dir){
-        // console.log('ppp');
-        this.options.IntervalTimer = setInterval(()=>{
+        this.IntervalTimer = setInterval(()=>{
+            console.log('moving--------');
             this.moveing(dir);
-            // console.log('kkk=========');
-        }, 1);
+        }, 10);
     }
     startMarqueeImg.prototype.moveing = function(dir) {
         //从左往右滚动是left在加1， 从右往左是left在减1
@@ -336,7 +324,7 @@ function cloneObj(oldObj) { //复制对象方法
          //每次只滚动一个图片 就停一下
         if(moveLeft%oneSlideWid==0){
             //代表移动了一张图片的距离
-          clearInterval(this.options.IntervalTimer);
+          clearInterval(this.IntervalTimer);
           setTimeout(()=>{
             this.options.moveingTag && this.start();
           },this.options.delay)

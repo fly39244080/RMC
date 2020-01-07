@@ -13,18 +13,6 @@ require.ensure([], function(){
         let runimg=new imageSlide.runImg('bannerBox','30',imgCount);
         runimg.info();
     }
-    var noticeList =  document.getElementById('noticeList'),
-        imgsLen = noticeList.querySelectorAll('dd').length;
-        
-        noticeList.style.width = imgsLen * 300 *2;
-        
-    let startMarquee2=new imageSlide.startMarqueeImg({
-        element:'noticeList',
-        leftArrow:'iconLeft',
-        rightArrow:'iconRight',
-        slideFullWid:imgsLen * 300 *2
-    });
-    startMarquee2.init();
  
 },'imageSlider');
 
@@ -72,6 +60,15 @@ var sctemplate = `<ul class="sources-list">
     </ul>`;
 var schtml = ejs.render(sctemplate, { sourcesList: sourcesList });
 document.getElementById('sourcesFrame').innerHTML = schtml;  
+
+
+var single;
+$(window).load(function () {
+    single = $('.imgs-slides-out').mySingleScroll({
+        speed: 2000
+    });
+});
+
 
 // config.ajaxFun({
 //     url:'/api/getColorOrsize',
