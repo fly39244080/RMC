@@ -1,5 +1,13 @@
 import '../styles/login.less'
 import $ from 'jquery'
+
+window.onload = function(){
+    const imgVer = require('./liveCode')
+    console.log(imgVer);
+    
+    
+}
+
 $(function(){
     // 验证码倒计时长
     var countNum = 60
@@ -128,4 +136,38 @@ $(function(){
         clearInterval(timer)
         $("#getCapture").text('获取验证码')
     }
+    
+    var token;
+    imgVer({
+        el:'#imgVer',
+        width:'260',
+        height:'116',
+        img:[
+            '../images/login/ver.png',
+            '../images/login/ver-1.png',
+            '../images/login/ver-2.png',
+            '../images/login/ver-3.png'
+        ],
+        success:function () {
+            
+        },
+        error:function () {
+            //alert('错误执行')
+        }
+    },"puzzleBox");
+    $(".submit").on('click',function () {
+            token = {
+                "token":"asda87d9a7f9g879f78s7hs",
+                "code":"ABCD"
+            };
+            $(".login").css({
+                "left":"-404px",
+                "opacity":"0"
+            });
+            $(".verBox").css({
+                "left":"0",
+                "opacity":"1"
+            });
+    })
+    
 })
