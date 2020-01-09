@@ -1,0 +1,63 @@
+.banner-box {
+    height: 520px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .banner-box .banner-box-inner {
+    height: 100%;
+  }
+  .banner-box .banner-img-list {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .banner-box .banner-img-list li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+  }
+  .banner-box .banner-img-list li:nth-child(1) {
+    z-index: 2;
+  }
+  .banner-box .banner-img-list li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .banner-box .banner-img-list li a img.pc-img {
+    height: 350px;
+  }
+  .banner-box .banner-img-list li.active {
+    z-index: 10;
+  }
+  .banner-box .countNum {
+    position: absolute;
+    left: -moz-calc(0%);
+    left: -webkit-calc(0%);
+    left: calc(0%);
+    bottom: 14px;
+    z-index: 20;
+  }
+  .banner-box .countNum li {
+    width: 30px;
+    height: 5px;
+    float: left;
+    color: #fff;
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin: 0 4px;
+    background-color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    cursor: pointer;
+  }
+  .banner-box .countNum li.current {
+    background: #fff;
+    font-weight: bold;
+  }
+  

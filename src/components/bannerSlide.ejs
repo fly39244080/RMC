@@ -5,3 +5,16 @@
         <li><img src="./static/images/banner/01.png"></li>
     </ul>
 </div>
+<link href="./static/img-slide.css" rel="stylesheet" />
+<script type="text/javascript" src="./static/js/image_show_slider.js"></script>
+<script>
+
+  var bannerBox = document.getElementById('bannerBox');
+    let imgCount=bannerBox.querySelectorAll('li').length;
+   
+    if(imgCount>0) {
+        bannerBox.querySelectorAll('li')[0].style.zIndex = 2;
+        let runimg=new runImg('bannerBox','30',imgCount);
+        runimg.info();
+    }
+</script>

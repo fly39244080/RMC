@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="软谋教育">
+    <meta name="keyword" content="软谋教育">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <%= require('../components/header.ejs')()%>
+    <%= require('../components/bannerSlide.ejs')()%>
+    <div class="page-width">   
+        <div class="main-title">.NET架构师黄埔班</div>
+        <div id="netReport">
+            对标阿里P6+，输出前沿架构师知识体系和思维 <br/>（共158课时，学习7个月）
+            <img src="">
+        </div> 
+        <button type="button" class="btn-normal"  style="margin-bottom: 50px;margin-top: 50px;">点击获取完整版课程表</button>
+        
+    </div>
+
+    <div class="bg-box">
+        <div class="page-width our-teachers">
+            <div class="main-title">师资雄厚 教学质量可信赖</div>
+            <dl>  
+                <dd>
+                    <img src="./static/images/teachers/tonny.png">
+                    <b>Zilor</b>
+                    <span class="title">专注.NET开发10余年，5年系统架构经验，具有丰富的项目架构实战与.NET教学经验，具备.NET Core平台下SOA与微服</span>
+                </dd>
+                <dd>
+                    <img src="./static/images/teachers/licheng.png">
+                    <b>Tony</b>
+                    <span class="title">10年软件开发经验，6年架构师经验，熟悉常用设计模式，有大型分布式、集群、高并发、高负载、高可用系统设计经验，具备服务化与微服务架构设计能力，对性能调优，特别是大数据、高并发下的数据库调优有丰富的实战经验。</span>
+                </dd>
+                <dd>
+                    <img src="./static/images/teachers/tonny.png">
+                    <b>Ben</b>
+                    <span class="title">14年软件开发经验，8年互联网公司架构师经验，有丰富的分布式系统架构设计经验，具有.NET平台下高性能、高可用性、高可扩展性网站架构、代码开发及性能调优经验，熟悉Redis、MQ、Nginx、Lucene等中间件的原理和使用，对.netcore、微服务有丰富的实战经验。</span>
+                </dd>
+                <dd>
+                    <img src="./static/images/teachers/tonny.png">
+                    <b>Cooper</b>
+                    <span class="title">12年软件开发经验，6年架构师经验，对负载均衡、异步消息队列、反向代理、缓存等大型项目采用高性能系统架构及技术有比较全面系统的理解和实际的应用经验，熟悉云计算技术概念，熟悉微服务架构设计思想。</span>
+                </dd>
+            </dl>
+            <div class="info-tip">
+                <button type="button" class="btn-normal">免费领取试听课</button>
+            </div>
+        </div>
+    </div>
+        <div class="page-width website-qa">
+            <div class="main-title">Q&A</div>
+            <dl>
+                <dt>该课程适合什么样的人群？</dt>
+                <dd>本课程为.NET架构师进阶课程，适合有一定开发经验的.NET中高级开发人员学习。</dd>
+                <dt>经常加班，错过直播怎么办？</dt>
+                <dd>课后老师会第一时间将课程源码、视频、课件发出来供大家复习，同时，直播和录播也支持移动端观看（安装腾讯课堂APP），学员可以随到</dd>
+                <dt>报名.NET架构班后，可以学多久？</dt>
+                <dd>直播权限，学员买当期可以重修下一期，老师答疑服务期限为一年，如果课程有更新，学员不用二次付费即可观看新班级教学视频。</dd>
+                <dt>学完后能达到什么样的效果？</dt>
+                <dd>本课程对标阿里P6+，学好本课程后，能够轻松胜任一线互联网/软件企业架构师岗位，在一线城市拿月薪30k没有问题。</dd>
+                <dt>报名后有预习资料吗？</dt>
+                <dd>学员报名后，会提供完整的配套预习资料。</dd>
+                <dt>自制力太差，担心坚持不下来，怎么办？</dt>
+                <dd>学员入学后，配有专职的班主任监督学习进度（到课、作业、复习情况实时跟进）。针对于学员的技术问题，老师6*10小时实时在线答疑，</dd>
+            </dl> 
+        </div>
+
+
+    <%= require('../components/footer.ejs')()%>
+
+</body>
+</html>
