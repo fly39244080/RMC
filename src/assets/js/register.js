@@ -64,15 +64,59 @@ $(function(){
             return;
         }
         doing = true;
-        $(this).text(countNum)
-        timer = setInterval(()=>{
-            countNum--
-            if(countNum == 0){
-                initInterval()
-                return;
+        // $(this).text(countNum)
+        // timer = setInterval(()=>{
+        //     countNum--
+        //     if(countNum == 0){
+        //         initInterval()
+        //         return;
+        //     }
+        //     $(this).text(countNum)
+        // },1000)
+        $(".verBox").show()
+        $(".verBox").addClass("infinite")
+        setTimeout(()=>{
+            $(".verBox").removeClass("infinite")
+        },500)
+        // 加一个滑块验证码验证
+        imgVer({
+            el:'$("#imgVer")',
+            width:'260',
+            height:'116',
+            img:[
+                './static/images/login/ver.png',
+                './static/images/login/ver-1.png',
+                './static/images/login/ver-2.png',
+                './static/images/login/ver-3.png'
+            ],
+            success:function () {
+                doing = true
+                setTimeout(()=>{
+                    $(".verBox").hide()
+                },500)
+                $("#getCapture").text(countNum)
+                timer = setInterval(()=>{
+                    doing = true
+                    countNum--
+                    if(countNum == 0){
+                        initInterval()
+                        return;
+                    }
+                    $("#getCapture").text(countNum)
+                },1000)
+                
+            },
+            error:function () {
+                //alert('错误执行')
+            },
+            wrong:function(){
+                doing = false;
+                $("#wrong").click(function(){
+                    $(".verBox").hide()
+                })
             }
-            $(this).text(countNum)
-        },1000)
+    
+        });
     })
     // 倒计时初始化
     function initInterval(){
