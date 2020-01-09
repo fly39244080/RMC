@@ -1,7 +1,6 @@
-import $ from 'jquery'
- function imgVer(Config,verId) {
+function imgVer(Config) {
     // 图形滑块验证码参数配置
-        var el = $(Config);
+        var el = eval(Config.el);
         var w = Config.width;
         var h = Config.height;
         var imgLibrary = Config.img;
@@ -37,7 +36,7 @@ import $ from 'jquery'
     // 拼图初始化存在的left位置
         var left_Num = -X + 10;
     // 图形滑块验证码 DOM 生成
-        var html = '<div style="position:relative;padding:16px 16px 28px;border:1px solid #ddd;background:#f2ece1;border-radius:16px;">';
+        var html = '<div style="margin-bottom:12px;position:relative;padding:16px 16px 28px;border:1px solid #ddd;background:#f2ece1;border-radius:16px;">';
         html += '<div style="position:relative;overflow:hidden;width:'+ w +'px;">';
         html += '<div style="position:relative;width:'+ w + 'px;height:'+ h +'px;">';
         html += '<img id="scream" src="'+ imgSrc +'" style="width:'+ w +'px;height:' + h + 'px;">';
@@ -49,9 +48,8 @@ import $ from 'jquery'
         html += '</div>';
         html += '<p class="ver-tips"></p>';
         html += '</div>';
-        html += '<div class="re-btn"><a></a></div>';
+        html += '<div class="re-btn"><a></a><span id="wrong"></span></div>';
         html += '</div>';
-        html += '<br>';
         html += '<div style="position:relative;width:'+ w +'px;margin:auto;">';
         html += '<div style="border:1px solid #c3c3c3;border-radius:24px;background:#ece4dd;box-shadow:0 1px 1px rgba(12,10,10,0.2) inset;">';
         html += '<p style="font-size:12px;color: #486c80;line-height:28px;margin:0;text-align:right;padding-right:22px;">按住左边滑块，拖动完成上方拼图</p>';
@@ -64,9 +62,7 @@ import $ from 'jquery'
     
         //使用canvas画出缺失拼图
         var d = PL_Size/3;
-        var c=document.getElementById(verId);
-        console.log(c);
-        
+        var c=document.getElementById("puzzleBox");
         var ctx = c.getContext("2d");
     
         ctx.globalCompositeOperation ="xor";
@@ -229,9 +225,6 @@ import $ from 'jquery'
         $(".re-btn a").on("click",function () {
             imgVer(Config);
         })
-}
-
-module.exports = {
-    imgFun:imgVer
-}
+        Config.wrong();
+    }
     

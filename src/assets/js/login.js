@@ -1,18 +1,12 @@
 import '../styles/login.less'
 import $ from 'jquery'
 
-window.onload = function(){
-    const imgVer = require('./liveCode')
-    console.log(imgVer);
-    
-    
-}
 
 $(function(){
     // 验证码倒计时长
     var countNum = 60
     // 定义一个flag判断是否已经触发定时器
-    var doing = false;
+    
     var timer = undefined
     // 密码登录模块手机号和密码的检测标识
     var passFlag = {
@@ -25,12 +19,14 @@ $(function(){
         capFlag:false
     }
     $("#passwordLogin").click(function(){
+        // debugger
         $(this).addClass('active-li').siblings('#messageLogin').removeClass('active-li')
         $(".password").show().siblings(".message").hide()
         // 让短信登录页回归原始状态
         initMessage()
     })
     $("#messageLogin").click(function(){
+        // debugger
         $(this).addClass('active-li').siblings('#passwordLogin').removeClass('active-li')
         $(".password").hide().siblings(".message").show()
         // 让密码登录页回归到原始状态
@@ -56,8 +52,9 @@ $(function(){
         messageFlag.capFlag = /^\d{4}$/.test(num)
         messageFlag.capFlag ? $(".cap-error-tip").hide() : $(".cap-error-tip").show()
     });
+    var doing = false;
     // 点击获取验证码的处理
-    $("#getCapture").click(function(){
+    $("#getCapture").on('click',function(){
         // 手机号不通过的时候不触发倒计时并且提示
         if(!messageFlag.phoneFlag){
             $(".msg-error-tip").show()
@@ -67,17 +64,57 @@ $(function(){
         if(doing){
             return;
         }
-        doing = true;
-        $(this).text(countNum)
-        timer = setInterval(()=>{
-            countNum--
-            if(countNum == 0){
-                initInterval()
-                return;
+        // doing = true;
+        $(".verBox").show()
+        $(".verBox").addClass("infinite")
+        setTimeout(()=>{
+            $(".verBox").removeClass("infinite")
+        },500)
+        // 加一个滑块验证码验证
+        imgVer({
+            el:'$("#imgVer")',
+            width:'260',
+            height:'116',
+            img:[
+                './static/images/login/ver.png',
+                './static/images/login/ver-1.png',
+                './static/images/login/ver-2.png',
+                './static/images/login/ver-3.png'
+            ],
+            success:function () {
+                doing = true
+                setTimeout(()=>{
+                    $(".verBox").hide()
+                },500)
+                $("#getCapture").text(countNum)
+                timer = setInterval(()=>{
+                    doing = true
+                    countNum--
+                    if(countNum == 0){
+                        initInterval()
+                        return;
+                    }
+                    $("#getCapture").text(countNum)
+                },1000)
+                
+            },
+            error:function () {
+                //alert('错误执行')
+            },
+            wrong:function(){
+                doing = false;
+                $("#wrong").click(function(){
+                    $(".verBox").hide()
+                })
             }
-            $(this).text(countNum)
-        },1000)
+    
+        });
+        
+        
+        
     })
+    
+   
     // 点击登录的时候
     $(".login-btn").click(function(){
         // 判断当前登录是密码登录还是短信登录
@@ -136,38 +173,7 @@ $(function(){
         clearInterval(timer)
         $("#getCapture").text('获取验证码')
     }
-    
-    var token;
-    imgVer({
-        el:'#imgVer',
-        width:'260',
-        height:'116',
-        img:[
-            '../images/login/ver.png',
-            '../images/login/ver-1.png',
-            '../images/login/ver-2.png',
-            '../images/login/ver-3.png'
-        ],
-        success:function () {
-            
-        },
-        error:function () {
-            //alert('错误执行')
-        }
-    },"puzzleBox");
-    $(".submit").on('click',function () {
-            token = {
-                "token":"asda87d9a7f9g879f78s7hs",
-                "code":"ABCD"
-            };
-            $(".login").css({
-                "left":"-404px",
-                "opacity":"0"
-            });
-            $(".verBox").css({
-                "left":"0",
-                "opacity":"1"
-            });
-    })
+   
     
 })
+

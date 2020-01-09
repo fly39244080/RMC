@@ -5,6 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link  rel="stylesheet"  href="./static/main.css" >
+    <link  rel="stylesheet"  href="./static/animate.min.css" >
+    <link  rel="stylesheet"  href="./static/login/login.css" >
+    <script src="./static/js/jquery-1.8.3.min.js"></script>
+    <script src="./static/js/liveCode.js"></script>
+    <style>
+        .bxs-row {
+            margin-bottom:12px;
+        }
+        .logo-box {
+            width:404px;
+            margin:120px auto;
+            border:1px solid #e5e5e5;
+            border-radius:4px;
+            box-shadow:0 4px 18px rgba(0,0,0,0.2);
+            position:relative;
+            overflow:hidden;
+            height:360px;
+        }
+        .login {
+            position:absolute;
+            width:320px;left:0;
+            top:0;
+            padding: 42px 42px 36px;
+            transition:all 0.8s;
+        }
+
+        .submit {
+            background-color: #0070ba;
+            color:#fff;
+            border:1px solid #0070ba;
+        }
+        .submit:hover {
+            background-color:#005ea6;
+        }
+        .verBox {
+            position:absolute;
+            width:100%;
+            text-align:center;
+            left:0px;
+            top:30px;
+            opacity:1;
+            transition:all 0.8s;
+            padding-top:55px;
+            /* display: block; */
+            display: none;
+        }
+        .err {
+            margin:12px 0 0;
+            line-height:12px;
+            height:12px;
+            font-size:12px;
+            color:red;
+        }
+    </style>
 </head>
 <body>
     <div class="main-login">
@@ -48,29 +102,14 @@
                 <li>忘记密码？</li>
                 <li><a href='./register.html'>立即注册</a></li>
             </ul>
-        </div>
-        <div class="logo-box">
-            <!-- <div class="login" style="">
-                <div class="bxs-row" style="text-align:center;">
-                    <img id="logo" src="images/logo.jpg" style="width:72px;"><span class="tips" style="color:red;">忍住不哭来段口技</span>
-                </div>
-                <div class="bxs-row">
-                    <input type="text" class="username" value="admin" placeholder="用户名">
-                    <p class=" err err-username"></p>
-                </div>
-                <div class="bxs-row">
-                    <input type="password" class="password" placeholder="密码">
-                    <p class="err err-password"></p>
-                </div>
-                <div class="bxs-row">
-                    <input type="submit" class="submit btn" value="登录">
-                </div>
-            </div> -->
-            <div class="verBox">
+            <div class=" verBox bounceIn animated ">
                 <div id="imgVer" style="display:inline-block;"></div>
             </div>
         </div>
+        
     </div>
-
+    <script>
+       
+    </script>
 </body>
 </html>
