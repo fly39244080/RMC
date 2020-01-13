@@ -177,7 +177,6 @@ border-radius:25px;
       width: 1200px;
       margin: 0 auto;
       height: auto;
-      overflow: auto;
   }
 /* header */
 .top-menu {
@@ -200,6 +199,7 @@ border-radius:25px;
 }
 .top-menu li a.actived {
   color: #000;
+  font-weight: bold;
 }
 .top-menu .logo {
   width:168px;
@@ -443,6 +443,7 @@ border-radius:25px;
 }
 .bg-box {
   background: #ededed;
+ 
 }
 .main-title {
   height:32px;

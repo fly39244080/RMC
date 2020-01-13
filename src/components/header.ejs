@@ -2,12 +2,12 @@
 <link href="./static/main.css" rel="stylesheet">
 <div class="top-menu page-width" id="topMenu">
     <div class="logo"></div>
-    <ul class="menu-list">
-        <li><a href="index.html" class="actived">首页</a></li>
+    <ul class="menu-list" id="menuList">
+        <li><a href="index.html" >首页</a></li>
         <li><a href="net.html">.NET架构</a></li>
         <li><a href="web.html">WEB前端</a></li>
         <li><a href="audition.html">预约试听</a></li>
-        <li><a href="audition.html">软谋动态</a></li>
+        <li><a href="news.html">软谋动态</a></li>
         <li><a href="about.html">关于我们</a></li> 
     </ul>
     <div class="quick-link">
@@ -15,5 +15,22 @@
         <a href="register.html" class="actived">注册</a>
     </div>
 </div>
+
+<script>
+(function(){
+    //当前菜单需要高亮显示
+    var curUrl = location.href;
+
+    var menuList = document.getElementById('menuList');
+    var allA = menuList.querySelectorAll('a');
+    allA.forEach(function(option,index){
+        if(option.href == curUrl){
+            option.className = 'actived';
+        }
+    });
+  
+})();
+
+</script>
 
  

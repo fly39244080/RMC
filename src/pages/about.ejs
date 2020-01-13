@@ -1,0 +1,124 @@
+<!-- 关于我们 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="软谋教育">
+    <meta name="keyword" content="软谋教育">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <%= require('../components/header.ejs')()%>
+    <%= require('../components/bannerSlide.ejs')()%>
+    <div class="page-width">
+        <div class="main-title">软谋简介</div>
+        <div class="company-info">
+            <img src="static/images/about/company.jpg">
+            <div class="text-info">
+              <p>
+                软谋教育，全称武汉软谋教育科技有限公司，位于武汉市洪山区，成立于2014年7月14日，
+                专注IT互联网在线教育，目前开设有.NET学科、Web前端学科、JAVA学科，服务各类IT人才近100W，
+                其中付费学员近2W。 
+            </p>
+            <p>
+                机构依托腾讯课堂在线教学，成立6年来，累计直播次数近2000次，
+                课程更新迭代12次，秉持“让变成更简单，让程序员更幸福”的使命，软谋教育坚持口碑教学，
+                狠抓教学质量以及学员服务，受到了广大学员的一致好评。
+            </p> 
+            </div>
+        </div>
+     </div>
+     <div class="bg-box">
+     <div class="page-width">   
+        <div class="main-title">关于软谋</div>
+        <div id="servicesList">
+            <ul class="about-us-list">
+                <li>
+                    <img src="static/images/about/01.png">
+                    <span class="title">企业使命</span>
+                    <span>让变成更简单<br/> 让程序员更幸福</span>
+                </li> 
+                <li>
+                    <img src="static/images/about/02.png">
+                    <span class="title">企业愿景</span>
+                    <span>做一家口碑型、受人尊敬的<br/>教育机构，成为行业领跑者</span>
+                </li> 
+                <li>
+                    <img src="static/images/about/03.png">
+                    <span class="title">企业核心价值观</span>
+                    <span>客户为本,奋斗者优先 <br/>不断反省,乐观进取</span>
+                </li> 
+                <li>
+                    <img src="static/images/about/04.png">
+                    <span class="title">企业精神</span>
+                    <span>敬业 真诚 务实 拓新</span>
+                </li> 
+              
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <div class="page-width">   
+        <div class="main-title">成长足迹</div>
+        <div class="company-history" id="companyHistory">
+            <div class="line"></div>
+            <ul>
+                <li class="current">
+                    2014
+                    <span>
+                        7月 软谋教育成立 <br/>
+                        7月 入驻腾讯课堂，成立.NET学科
+                    </span>
+                </li>
+                <li>2015
+                    <span>2015年1月  成立Web前端学科</span>
+                </li>
+                <li>2016
+                    <span>2016年7月  荣获腾讯课堂首批认证机构奖</span>
+                </li>
+                <li>2017
+                    <span>2017年1月  荣获腾讯课堂年度最受欢迎奖 <br/>2017年4月  成立JAVA学科</span>
+                </li>
+                <li>2018
+                    <span>2018年1月  荣获腾讯课堂前端认证机构奖<br/>
+                        2018年2月  荣获腾讯课堂编程认证机构奖<br/>
+                        2018年9月  荣获腾讯课堂创造101火箭机构奖</span>
+                </li>
+                <li>2019
+                    <span>2019年4月  荣获腾讯课堂城市合作伙伴奖
+                        </span>
+                </li>
+                <li >2020
+                    <span>2020年1月  荣获腾讯课堂金课堂奖</span>
+                </li>
+            </ul>
+
+            <div class="history-detail">
+                
+            </div>
+        </div>
+    </div>
+    <div class="bg-box">
+        <div class="page-width">   
+           <div class="main-title">软谋荣誉</div>
+           <img src="static/images/about/honor.png" class="img-honor" >
+        </div>
+    </div>
+
+    <div class="page-width clearfix" style="overflow: hidden;">  
+        <div class="main-title">软谋风采</div>
+        <div id="companyElegant" class="company-elegant clearfix">
+            <div class="box"><img src="static/images/course01.png"></div>
+            <div class="box"><img src="static/images/course01.png"></div>
+            <div class="box"><img src="static/images/course01.png"></div>
+            <div class="box"><img src="static/images/course01.png"></div>
+            <div class="box"><img src="static/images/course01.png"></div>
+        </div>
+    </div>
+
+
+     <%= require('../components/footer.ejs')()%> 
+    </body>
+    </html>
