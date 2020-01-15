@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="软谋教育">
+    <meta name="keyword" content="软谋教育">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <%= require('../components/header.ejs')()%>
+    <%= require('../components/bannerSlide.ejs')()%>
+    <div class="page-width net-report">   
+        <div class="main-title">Web前端高级班</div>
+        <div id="netReport">
+            <p>输出前沿前端技术体系及思维 <br/>（共152课时，学习6.5个月）</p>
+            <img src="">
+        </div> 
+        <button type="button" class="btn-normal"  style="margin-bottom: 50px;margin-top: 50px;font-size: 20px;height: 50px;">点击获取完整版课程表</button>
+        
+    </div>
+
+    <div class="bg-box">
+        <div class="page-width web our-teachers">
+            <div class="main-title">师资雄厚 教学质量可信赖</div>
+            <dl>  
+                <dd>
+                    <img src="./static/images/teachers/dylan.png">
+                    <b>Zilor</b>
+                    <span class="title">软谋教育创始人，12年Web开发经验， 6年在线教育经验，曾就职于39健康 网、同程旅游等互联网公司。</span>
+                </dd>
+                <dd>
+                    <img src="./static/images/teachers/laney.png">
+                    <b>Tony</b>
+                    <span class="title">软谋教育前端高级讲师，专注前端开 发13年，曾就职于欢聚时代、艺龙网等 互联网公司。</span>
+                </dd>
+                <dd>
+                    <img src="./static/images/teachers/chris.png">
+                    <b>Ben</b>
+                    <span class="title">软谋教育前端高级讲师，专注前端开发7年，曾就职于盛大网络、搜房、网易 等互联网公司。</span>
+                </dd>
+                <dd>
+                    <img src="./static/images/teachers/nicole.png">
+                    <b>Cooper</b>
+                    <span class="title">软谋教育前端高级讲师，专注前端开 发6年，曾就职于凤凰网、21CN等互联 网公司。</span>
+                </dd>
+            </dl>
+            <div class="info-tip">
+                <button type="button" class="btn-normal" id="btnTryLesson">免费领取试听课</button>
+            </div>
+        </div>
+    </div>
+        <div class="page-width website-qa">
+            <div class="main-title">Q&A</div>
+            <dl>
+                <dt>该课程适合什么样的人群？</dt>
+                <dd>本课程为Web前端进阶课程，适合有一定前端开发经验的开发人员学习。</dd>
+                <dt>经常加班，错过直播怎么办？</dt>
+                <dd>课后老师会第一时间将课程源码、视频、可见发出来供大家复习，同时，直播和录播也支持移动端观看，学员可以随时随地学习。</dd>
+                <dt>报名Web前端高级班后，可以学多久？</dt>
+                <dd>直播权限，学员买当期还可以免费重修下一期，老师答疑服务期限为一年，课程如有更新，学员不用二次付费,即可观看新班级教学视频。</dd>
+                <dt>学完后能达到什么样的效果？</dt>
+                <dd>本课程一线大厂前端高级工程师岗位，学好本课程后，能够轻松胜任一线互联网/软件企业前端高级开发岗位，在一线城市月薪18K没有问题。</dd>
+                <dt>报名后有预习资料吗？</dt>
+                <dd>学员报名后，会提供完整的配套预习资料。</dd>
+                <dt>自制力太差，担心坚持不下来，怎么办？</dt>
+               
+                <dd>学员入学后，配有专职的班主任监督学习进度（到课、作业、复习情况实时跟进）。针对于学员的技术问题，老师6*10小时实时在线答疑，同时还有班级群，大家还可以在群里互帮互助，形成良好的学习气氛，总之，你不是一个人在战斗，相信自己，相信软谋。</dd>
+            </dl> 
+        </div>
+
+
+    <%= require('../components/footer.ejs')()%>
+
+</body>
+</html>

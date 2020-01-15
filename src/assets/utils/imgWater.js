@@ -22,8 +22,10 @@ export default function imgLayout(){
                 item.style.width=_boxWid+'px';
 
                 // object.getClientRects();和object.getBoundingClientRect();
+                boxH = Math.floor(_boxWid * event.target.height/event.target.width);
+                 
 
-                 boxH = item.getBoundingClientRect().height;
+                //  boxH = item.getBoundingClientRect().height;
                 item.style.cssText = `width:${_boxWid}px;height:${boxH}`
                 heightArr[index] = boxH;
                 console.log(heightArr);
@@ -31,9 +33,10 @@ export default function imgLayout(){
                   //最小高度      
                 var minH = Math.min.apply(Math.min,heightArr);
                 var minHeightIndex = heightArr.indexOf(minH);
+                boxH = Math.floor(_boxWid * event.target.height/event.target.width);
                 item.style.cssText = `;position:absolute;width:${_boxWid}px;
-                left:${minHeightIndex * _boxWid}px;top:${minH}px`
-                 boxH = item.getBoundingClientRect().height;
+                left:${minHeightIndex * _boxWid}px;top:${minH}px;height:${boxH}`
+                
                 //高度追加
                  heightArr[minHeightIndex] += boxH;
                  

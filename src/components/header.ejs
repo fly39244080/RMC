@@ -24,7 +24,9 @@
     var menuList = document.getElementById('menuList');
     var allA = menuList.querySelectorAll('a');
     allA.forEach(function(option,index){
-        if(option.href == curUrl){
+         var optName =  option.pathname.match(/\/(\S*)\.html$/)[1];
+         var curName =  location.pathname.match(/\/(\S*)\.html$/)[1];
+        if(curName.indexOf(optName)!=-1){
             option.className = 'actived';
         }
     });
