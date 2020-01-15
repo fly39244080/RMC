@@ -1,5 +1,4 @@
 import 'assets/styles/about.less';
-import imgLayout from '../utils/imgWater.js';
 var $companyHistory = $('#companyHistory');
 
 $companyHistory.find('li').on('mouseenter',function(ev){
@@ -28,12 +27,3 @@ function scrollHistaory(){
 }
 scrollHistaory();
 
-
-window.onload = function(){
-    
-    imgLayout();
-}
-
-window.onresize = function(){
-    imgLayout();
-}
