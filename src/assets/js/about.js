@@ -1,6 +1,6 @@
 import 'assets/styles/about.less';
 var $companyHistory = $('#companyHistory');
-
+var timer=null;
 $companyHistory.find('li').on('mouseenter',function(ev){
     var tet = $(this).find('span').html();
     var num = $companyHistory.find('li').index(this);
@@ -15,7 +15,7 @@ scrollHistaory.num = 0;
 function scrollHistaory(){
 
     //自动播放
-    setInterval(()=>{
+    timer = setInterval(()=>{
         if(scrollHistaory.num==$companyHistory.find('li').length-1) {
             scrollHistaory.num=0;
         } else {
@@ -27,3 +27,8 @@ function scrollHistaory(){
 }
 scrollHistaory();
 
+window.onbeforeunload = function()
+{ 
+    // return "Leave this page?";
+    clearInterval(timer);
+}
